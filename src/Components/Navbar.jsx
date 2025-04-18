@@ -12,7 +12,7 @@ const Navbar = () => {
     <h2 className='text-2xl'>React-redux</h2>
     <div>
       <IoBagCheckSharp  className='text-2xl'/>
-      <p className='absolute top-4.5 right-[280px] bg-amber-600 rounded-full'>{itemAmount}</p>
+      <p className='relative bottom-7.5 left-4 bg-amber-600 rounded-full text-center'>{itemAmount}</p>
     </div>
 
     </div>
