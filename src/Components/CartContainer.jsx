@@ -7,21 +7,22 @@ const CartContainer = () => {
   const { cartData, itemAmount, total } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-//   if(itemAmount<1){
-//     return (
-//       <section className='cart'>
-//    <header>
-//     <h2 className="text-center text-2xl">your bag</h2>
-//     <h4 className='text-center text-2xl'> is currently empty</h4>
-//    </header>
-//       </section>
-//     )
-//   }
+
 
   useEffect(() => {
     dispatch(calculateTotals());
   }, [cartData, dispatch]);
 
+  if(itemAmount<1){
+    return (
+      <section className='cart'>
+   <header>
+    <h2 className="text-center text-2xl">your bag</h2>
+    <h4 className='text-center text-2xl'> is currently empty</h4>
+   </header>
+      </section>
+    )
+  }
 
   return (
     <section className="ml-6">
